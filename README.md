@@ -53,7 +53,9 @@ This project is perfect for:
     - SSH – Port 22 (Your IP)
     - HTTP – Port 8080 (for Jenkins, Your IP)
 
- *Screenshot: EC2 Launch Settings*
+ 
+ ![WhatsApp Image 2025-08-06 at 16 02 53_3b78bb08](https://github.com/user-attachments/assets/f20813d8-21bc-47b8-8323-1013f0174396)
+
 
 ---
 

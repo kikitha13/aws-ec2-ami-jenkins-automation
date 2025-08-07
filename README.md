@@ -111,20 +111,17 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 
 ---
 
-#Step 5: Create Custom AMI
+🧰 Step 5: Create a Custom AMI
+Once Jenkins is successfully installed and running on the EC2 instance:
+
 Go to the EC2 Dashboard
 
-Select your configured instance
+Select your instance (e.g., ec2-1)
 
-Choose Actions > Image > Create Image
+Click Actions → Image → Create Image
 
-Name your AMI (e.g., jenkins-base-image)
+Provide a name and description
 
 Click Create Image
-![WhatsApp Image 2025-08-06 at 16 05 43_ab9ff64e](https://github.com/user-attachments/assets/6413e074-ec91-449d-b4a9-c5d7057563cc)
 
-
-
-
-
-
+🔁 This creates an AMI containing Jenkins and all your configurations — so you don’t need to install Jenkins again.

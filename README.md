@@ -21,10 +21,7 @@ In the real world, DevOps engineers often need to create **repeatable infrastruc
 - Build scalable launch templates.
 - Improve consistency across environments.
 
-This project is perfect for:
-- Final-year students
-- AWS beginners
-- Job seekers building DevOps portfolios
+
 
 ---
 

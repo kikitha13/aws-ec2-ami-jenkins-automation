@@ -74,7 +74,7 @@ ssh -i "my-key.pem" ec2-user@<public-ip-address>
 
 ## Step 3: Install Jenkins on EC2
 Run these commands inside your EC2 terminal:
-# 1. Update system packages
+## 1. Update system packages
 sudo apt update -y
 sudo apt upgrade -y
 
@@ -101,8 +101,6 @@ sudo systemctl start jenkins
 
 ###8. Enable Jenkins to start on boot
 sudo systemctl enable jenkins
-
----
 
 ##Step 4: Access Jenkins Web UI
 Open your browser:

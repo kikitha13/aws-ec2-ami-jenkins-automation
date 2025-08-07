@@ -72,37 +72,39 @@ ssh -i "my-key.pem" ec2-user@<public-ip-address>
 ---
 
 
-# Step 3: Install Jenkins on EC2
+## Step 3: Install Jenkins on EC2
 Run these commands inside your EC2 terminal:
 # 1. Update system packages
 sudo apt update -y
 sudo apt upgrade -y
 
-# 2. Install Java (required for Jenkins)
+### 2. Install Java (required for Jenkins)
 sudo apt install openjdk-11-jdk -y
 
-# 3. Add Jenkins repository key
+### 3. Add Jenkins repository key
 curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key | sudo tee \
   /usr/share/keyrings/jenkins-keyring.asc > /dev/null
 
-# 4. Add Jenkins repository
+### 4. Add Jenkins repository
 echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
   https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
   /etc/apt/sources.list.d/jenkins.list > /dev/null
 
-# 5. Update package list
+### 5. Update package list
 sudo apt update -y
 
-# 6. Install Jenkins
+### 6. Install Jenkins
 sudo apt install jenkins -y
 
-# 7. Start Jenkins
+### 7. Start Jenkins
 sudo systemctl start jenkins
 
-# 8. Enable Jenkins to start on boot
+###8. Enable Jenkins to start on boot
 sudo systemctl enable jenkins
 
-Step 4: Access Jenkins Web UI
+---
+
+##Step 4: Access Jenkins Web UI
 Open your browser:
 http://<public-ip>:8080
 To get the admin password:
@@ -111,7 +113,7 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 
 ---
 
-🧰 Step 5: Create a Custom AMI
+## Step 5: Create a Custom AMI
 Once Jenkins is successfully installed and running on the EC2 instance:
 
 Go to the EC2 Dashboard

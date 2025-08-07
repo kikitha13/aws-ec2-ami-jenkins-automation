@@ -65,7 +65,7 @@ This project is perfect for:
 Use the AWS Console to connect directly.
 
 #### Option 2: if you Using Git Bash  
-```bash
+bash
 ssh -i "my-key.pem" ec2-user@<public-ip-address>
 
 

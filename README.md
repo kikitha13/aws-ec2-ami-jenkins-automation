@@ -112,16 +112,73 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 ---
 
 ## Step 5: Create a Custom AMI
-Once Jenkins is successfully installed and running on the EC2 instance:
+Once Jenkins is successfully installed and running on your EC2 instance, follow these steps to create a reusable custom AMI:
 
-Go to the EC2 Dashboard
+Go to the EC2 Dashboard in the AWS Management Console.
 
-Select your instance (e.g., ec2-1)
+Select your running EC2 instance (e.g., ec2-jenkins-instance).
 
-Click Actions → Image → Create Image
+Click on Actions → Image and templates → Create image.
 
-Provide a name and description
+Provide a name and an optional description for your AMI.
 
-Click Create Image
+Click Create Image.
 
-🔁 This creates an AMI containing Jenkins and all your configurations — so you don’t need to install Jenkins again.
+ This creates a pre-configured AMI with Jenkins already installed and set up. You can now launch multiple instances using this AMI without repeating the Jenkins installation steps.
+
+---
+## Step 6: Launch EC2 Instance from AMI (demo-2)
+After the AMI is available (Status: available in AMIs section):
+
+Go to EC2 Dashboard → AMIs.
+
+Select the custom AMI you just created.
+![WhatsApp Image 2025-08-06 at 16 05 43_c632a1e0](https://github.com/user-attachments/assets/5c8f4bca-c178-49b7-a770-fd531917ab47)
+
+
+Click Launch instance from image.
+
+Configure instance settings:
+
+Name: demo-2
+
+Instance type: t2.micro (or as required)
+
+Key pair, Security group, etc.
+
+Click Launch instance.
+
+![WhatsApp Image 2025-08-06 at 16 09 18_24e78c27](https://github.com/user-attachments/assets/7ebc1203-b957-41e3-8409-bccbe20ea239)
+
+
+
+✅ This will launch a new EC2 instance (demo-2) with Jenkins pre-installed and ready to use.
+
+
+---
+
+
+## Step 7: Create a Launch Template
+Now, create a launch template based on the AMI:
+
+Go to the Launch Templates section in the EC2 Dashboard.
+
+Click Create launch template.
+
+Fill in the required fields:
+
+Launch template name
+
+AMI ID (select the one you created earlier)
+
+Instance type
+
+Key pair, Security Group, and other settings
+
+Click Create launch template.
+![WhatsApp Image 2025-08-06 at 16 10 58_071be085](https://github.com/user-attachments/assets/bdc1e396-fc64-4331-b74f-bc1f78789c1c)
+
+
+ This allows you to launch multiple Jenkins-ready EC2 instances automatically and consistently
+---
+
